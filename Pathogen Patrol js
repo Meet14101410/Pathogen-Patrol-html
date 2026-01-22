@@ -1,0 +1,10 @@
+let score = 0;
+const bug = document.getElementById("bug");
+const scoreTxt = document.getElementById("score");
+
+bug.onclick = () => {
+  score++;
+  scoreTxt.textContent = score;
+  bug.style.left = Math.random()*80 + "%";
+  bug.style.top = Math.random()*80 + "%";
+};
