@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pathogen Patrol</title>
+</head>
+<body>
+  <h1>🦠 Pathogen Patrol</h1>
+  <p>Click the pathogen before it escapes!</p>
+
+  <button id="bug">🦠</button>
+  <p>Score: <span id="score">0</span></p>
+
+  <script>
+    let score = 0;
+    const bug = document.getElementById("bug");
+    const scoreTxt = document.getElementById("score");
+
+    bug.onclick = () => {
+      score++;
+      scoreTxt.textContent = score;
+      bug.style.marginLeft = Math.random()*200 + "px";
+      bug.style.marginTop = Math.random()*200 + "px";
+    };
+  </script>
+</body>
+</html>
